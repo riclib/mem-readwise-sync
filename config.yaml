@@ -1,0 +1,21 @@
+readwise_key: enter_your_key_here
+
+mem_key: enter_your_key_here
+
+timestamp_format: Mon Jan _2 15:04
+
+book_template: |
+  # {{.Title}}
+  #{{.Category}}-readwise
+  Author: {{.Author}}
+  ![Cover]({{.CoverImageUrl}})
+  {{if .SourceUrl}} src: {{.SourceUrl}} {{end}}
+
+
+highlight_template: |
+  # {{.Book.MemURL}} highlights
+  #highlights synced on {{.TimeStamp}}
+  {{range .Highlight}}- {{.Text}}{{range .Tags}} #{{.Name}}{{end}}{{if .Note}}
+    - {{.Note}}{{end}}
+  {{end}}
+
