@@ -3,10 +3,10 @@ package main
 import "time"
 
 type ReadwiseBooks struct {
-	Count    int           `json:"count"`
-	Next     string        `json:"next"`
-	Previous interface{}   `json:"previous"`
-	Results  []Book `json:"results"`
+	Count    int         `json:"count"`
+	Next     string      `json:"next"`
+	Previous interface{} `json:"previous"`
+	Results  []Book      `json:"results"`
 }
 
 type Book struct {
@@ -22,12 +22,13 @@ type Book struct {
 	SourceUrl       interface{}   `json:"source_url"`
 	Asin            string        `json:"asin"`
 	Tags            []interface{} `json:"tags"`
+	MemURL          string        `json:"mem_url"`
 }
 
 type ReadwiseHighlights struct {
-	Count    int           `json:"count"`
-	Next     string        `json:"next"`
-	Previous interface{}   `json:"previous"`
+	Count    int         `json:"count"`
+	Next     string      `json:"next"`
+	Previous interface{} `json:"previous"`
 	Results  []Highlight `json:"results"`
 }
 
