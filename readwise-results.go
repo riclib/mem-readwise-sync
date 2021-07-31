@@ -33,16 +33,16 @@ type ReadwiseHighlights struct {
 }
 
 type Highlight struct {
-	Id            int         `json:"id"`
-	Text          string      `json:"text"`
-	Note          string      `json:"note"`
-	Location      int         `json:"location"`
-	LocationType  string      `json:"location_type"`
-	HighlightedAt interface{} `json:"highlighted_at"`
-	Url           interface{} `json:"url"`
-	Color         string      `json:"color"`
-	Updated       time.Time   `json:"updated"`
-	BookId        int         `json:"book_id"`
+	Id            int       `json:"id"`
+	Text          string    `json:"text"`
+	Note          string    `json:"note"`
+	Location      int       `json:"location"`
+	LocationType  string    `json:"location_type"`
+	HighlightedAt time.Time `json:"highlighted_at"`
+	Url           string    `json:"url"`
+	Color         string    `json:"color"`
+	Updated       time.Time `json:"updated"`
+	BookId        int       `json:"book_id"`
 	Tags          []struct {
 		Id   int    `json:"id"`
 		Name string `json:"name"`
