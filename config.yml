@@ -12,7 +12,7 @@ timestamp_format: Mon Jan _2 15:04. There is a good explanation at https://yourb
 
 book_template: |
   # {{.Title}}
-  #{{.Category}}-readwise
+  #{{.Category}} #readwise
   Author: {{.Author}}
   ![Cover]({{.CoverImageUrl}})
   {{if .SourceUrl}} src: {{.SourceUrl}} {{end}}
