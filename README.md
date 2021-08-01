@@ -1,5 +1,5 @@
 # mem-readwise-sync
-A is a command line synchronizer for bringing your books, articles and highlights from readwise to mem. 
+A command line synchronizer for bringing your books, articles and highlights from readwise to mem. 
 Every time you run it it will only bring the new highlights.
 
 Books will be stored separately from highlights. When there are new highlights a new mem will be created with just the new hghlights.
