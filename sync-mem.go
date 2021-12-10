@@ -59,7 +59,7 @@ func syncHighlightsToMem(ctx Context) {
 			log.Println("Executing Template", err)
 		}
 		// log.Println(buf.String())
-		_, err = sendCreate(ctx, buf.String())
+		_, err = sendAppend(ctx, b.Book.MemId, buf.String())
 		if err != nil {
 			log.Println("Sending Create Mem", err)
 		} else {
@@ -87,11 +87,13 @@ func syncBooksToMem(ctx Context) {
 				log.Println("Executing Template", err)
 			}
 
-			book.MemURL, err = sendCreate(ctx, buf.String())
+			createResponse, err := sendCreate(ctx, buf.String())
 			if err != nil {
 				log.Println("Sending Create Mem", err)
 				continue
 			}
+			book.MemURL = createResponse.Url
+			book.MemId = createResponse.Id
 
 			if book.MemURL != "" {
 				err := AddBookToCache(ctx, book)

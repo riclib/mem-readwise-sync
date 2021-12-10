@@ -1,11 +1,12 @@
 # Replace enter_your_token_here by readwise token you can generate at https://readwise.io/access_token
-readwise_key: enter_your_token_here
+readwise_key: ziid6lZU0w62GdNsMqUnTHkxbTMkS6mIm3bTiVYOvUHojZjqT8
 
 # replace enter_your_key_here by mem api key you can generate at https://mem.ai/flows/api or by clicking Flows than Api - configure
-mem_key: enter_your_key_here
+mem_key: e3f6265e-d7ee-448e-978a-4c36f980c01e
 
 # you can change the timestamp format below, just Change this date to the format you'd like: 01/02 03:04:05PM ‘06 -0700, per example: Mon Jan 2 15:04:05 MST 2006 
-timestamp_format: Mon Jan _2 15:04. There is a good explanation at https://yourbasic.org/golang/format-parse-string-time-date-example/
+timestamp_format: Mon Jan _2 15:04
+#There is a good explanation at https://yourbasic.org/golang/format-parse-string-time-date-example/
 
 
 ## You can change the template for book and for highlight below. Make sure you keep the 2 leading spaces on each line and the two blank lines between. See README.md or the github repo for instructions and valid fields
@@ -19,8 +20,7 @@ book_template: |
 
 
 highlight_template: |
-  # {{.Book.MemURL}} highlights
-  #highlights synced on {{.TimeStamp}}
+  #### highlights synced on {{.TimeStamp}}
   {{range .Highlight}}- {{.Text}}{{range .Tags}} #{{.Name}}{{end}}{{if .Note}}
     - {{.Note}}{{end}}
   {{end}}

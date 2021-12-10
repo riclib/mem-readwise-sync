@@ -69,8 +69,7 @@ func main() {
 	switch command {
 	case "mem":
 		syncMem(context)
-	case "craft":
-		syncCraft(context)
+
 	}
 
 	AddTimeToCache(context, context.thisSyncTime)

@@ -30,6 +30,7 @@ type Book struct {
 	Asin            string        `json:"asin"`
 	Tags            []interface{} `json:"tags"`
 	MemURL          string        `json:"mem_url"`
+	MemId           string        `json:"mem_id"`
 }
 
 type ReadwiseHighlights struct {
